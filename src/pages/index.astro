@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import HeaderNav from '../components/landing/HeaderNav.astro';
+import HeroSection from '../components/landing/HeroSection.astro';
+import OverviewSection from '../components/landing/OverviewSection.astro';
+import FeaturesSection from '../components/landing/FeaturesSection.astro';
+import ComparisonSection from '../components/landing/ComparisonSection.astro';
+import ScreenshotsSection from '../components/landing/ScreenshotsSection.astro';
+import CtaSection from '../components/landing/CtaSection.astro';
+import FooterSection from '../components/landing/FooterSection.astro';
+import { structuredDataPayloads } from '../data/landing';
+
+const pageTitle = 'Dash | Open-Source Monitoring Dashboard';
+const pageDescription =
+  'Dash is an open-source monitoring dashboard with multi-datasource support for Prometheus, Loki, Tempo, and VictoriaMetrics.';
+const pageUrl = '/';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="canonical" href={pageUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dash" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content="/landing-hero.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content="/landing-hero.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="preload" as="image" href="/landing-hero.webp" type="image/webp" />
+
+    {
+      structuredDataPayloads.map((payload) => (
+        <script type="application/ld+json" set:html={JSON.stringify(payload)}></script>
+      ))
+    }
+  </head>
+
+  <body class="site-sheen px-3 py-4 md:px-6 md:py-6">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-30 focus:rounded-md focus:bg-teal-400 focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950"
+    >
+      Skip to main content
+    </a>
+
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-40 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-teal-500/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-[-10%] h-[20rem] w-[20rem] rounded-full bg-cyan-500/10 blur-3xl"></div>
+      <div class="absolute right-[-8%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2 rounded-full bg-emerald-400/10 blur-3xl"></div>
+    </div>
+
+    <HeaderNav />
+
+    <main id="main-content">
+      <HeroSection />
+      <OverviewSection />
+      <FeaturesSection />
+      <ComparisonSection />
+      <ScreenshotsSection />
+      <CtaSection />
+    </main>
+
+    <FooterSection />
+  </body>
+</html>

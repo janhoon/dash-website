@@ -1,0 +1,21 @@
+[
+  {
+    "id": "LANDING-ASTRO-CONVERSION-001",
+    "name": "Convert Vue landing page to Astro format",
+    "category": "Landing Page/Migration",
+    "task_size": "large",
+    "fizzy_ticket": 224,
+    "description": "Convert the 1265-line Vue landing page from Dash repo to Astro format with all SEO optimizations and structured data.",
+    "requirements": [
+      "Extract all content from LandingView.vue (1265 lines)",
+      "Create Astro components for 6 sections (Hero, Features, Comparison, Screenshots, CTA, Footer)",
+      "Preserve all JSON-LD structured data",
+      "Add Tailwind CSS integration",
+      "Maintain SEO meta tags and semantic HTML",
+      "Configure for static site generation",
+      "GitHub stats badges working",
+      "Lighthouse SEO score > 95"
+    ],
+    "passes": false
+  }
+]

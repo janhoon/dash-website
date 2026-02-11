@@ -1,0 +1,91 @@
+---
+type FeatureCard = {
+  id: string;
+  title: string;
+  description: string;
+  iconLabel: string;
+  paths: string[];
+};
+
+const featureCards: FeatureCard[] = [
+  {
+    id: 'feature-multi-datasource-title',
+    title: 'Multi-datasource monitoring with Prometheus, Loki, Tempo, and VictoriaMetrics',
+    description:
+      'Query metrics, logs, and traces from one dashboard experience to reduce context switching during incident response.',
+    iconLabel: 'Multi-datasource icon',
+    paths: [
+      'M4 6.5a8 3 0 1 0 16 0a8 3 0 1 0 -16 0',
+      'M4 6.5v5a8 3 0 0 0 16 0v-5',
+      'M4 11.5v5a8 3 0 0 0 16 0v-5',
+    ],
+  },
+  {
+    id: 'feature-self-hosted-title',
+    title: 'Self-hosted observability for secure infrastructure ownership',
+    description:
+      'Deploy Dash in your own environment with full control over data retention, network boundaries, and operational policies.',
+    iconLabel: 'Self-hosted icon',
+    paths: ['M12 3l9 4.5v4.7c0 5.3-3.5 8.6-9 9.8c-5.5-1.2-9-4.5-9-9.8V7.5L12 3z', 'M9 12l2 2l4-4'],
+  },
+  {
+    id: 'feature-grafana-title',
+    title: 'Grafana-compatible dashboard migration and import workflows',
+    description:
+      'Bring existing Grafana JSON into Dash, preview conversion results, and continue iterating without rebuilding dashboards from scratch.',
+    iconLabel: 'Grafana migration icon',
+    paths: ['M4 6h9v12H4z', 'M11 9h9v12h-9z', 'M7 10h3M7 13h3M14 13h3M14 16h3'],
+  },
+  {
+    id: 'feature-alerting-title',
+    title: 'Alerting and on-call workflows connected to datasource queries',
+    description:
+      'Configure alerts tied to dashboard panels and investigate triggered conditions directly in Explore and dashboard views.',
+    iconLabel: 'Alerting icon',
+    paths: [
+      'M12 4a5 5 0 0 1 5 5v3.5l1.6 2.7c.2.3 0 .8-.4.8H5.8c-.4 0-.6-.5-.4-.8L7 12.5V9a5 5 0 0 1 5-5z',
+      'M10 18a2 2 0 0 0 4 0',
+    ],
+  },
+  {
+    id: 'feature-sso-title',
+    title: 'Single Sign-On and role-based access control for organization security',
+    description:
+      'Enable Google or Microsoft SSO, manage members and groups, and enforce admin, editor, and viewer permissions across teams.',
+    iconLabel: 'SSO icon',
+    paths: ['M7 11a4 4 0 1 1 0-8a4 4 0 0 1 0 8zM17 21a4 4 0 1 0 0-8a4 4 0 0 0 0 8z', 'M10.5 8.5l3 3M13.5 15.5l3-3'],
+  },
+  {
+    id: 'feature-themes-title',
+    title: 'Customizable light and dark themes for day-shift and on-call use',
+    description:
+      'Choose themes that fit your working environment while preserving visual clarity for dense metrics, logs, and tracing data.',
+    iconLabel: 'Themes icon',
+    paths: ['M12 3a9 9 0 1 0 9 9a7 7 0 0 1-9-9z'],
+  },
+];
+---
+
+<section id="features" class="section-card" aria-labelledby="features-title">
+  <h2 id="features-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">Core Dash features for modern observability teams</h2>
+  <p class="mt-4 max-w-3xl text-slate-300">
+    Dash combines monitoring, alerting, and access control into a single open-source platform so teams can
+    troubleshoot incidents quickly without switching tools.
+  </p>
+
+  <ul class="mt-6 grid list-none gap-3 p-0 md:grid-cols-2 xl:grid-cols-3" aria-label="Dash platform feature list">
+    {
+      featureCards.map((feature) => (
+        <li class="m-0">
+          <article aria-labelledby={feature.id} class="grid h-full gap-3 rounded-xl border border-slate-700/70 bg-slate-800/70 p-4 shadow-[0_8px_24px_rgba(2,8,23,0.28)]">
+            <svg viewBox="0 0 24 24" role="img" aria-label={feature.iconLabel} class="h-7 w-7 stroke-teal-300" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              {feature.paths.map((path) => <path d={path}></path>)}
+            </svg>
+            <h3 id={feature.id} class="m-0 text-sm font-semibold leading-6 text-slate-50">{feature.title}</h3>
+            <p class="m-0 text-sm text-slate-300">{feature.description}</p>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>

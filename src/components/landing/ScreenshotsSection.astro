@@ -1,0 +1,40 @@
+---
+import { screenshotGallery } from '../../data/landing';
+---
+
+<section id="screenshots" class="section-card" aria-labelledby="screenshots-title">
+  <h2 id="screenshots-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">Product screenshots and demo-ready UI walkthrough</h2>
+  <p class="mt-4 max-w-3xl text-slate-300">
+    Explore key Dash workflows including dashboard analysis, datasource setup, query editing,
+    alerting, organization controls, and dark theme operation.
+  </p>
+
+  <ul class="mt-6 grid list-none gap-3 p-0 md:grid-cols-2 xl:grid-cols-3" aria-label="Dash screenshot gallery">
+    {
+      screenshotGallery.map((screenshot) => (
+        <li class="m-0" id={screenshot.id}>
+          <article class="h-full rounded-xl border border-slate-700/70 bg-slate-800/65 p-3 shadow-[0_8px_24px_rgba(2,8,23,0.28)]">
+            <figure class="m-0 grid gap-3">
+              <picture class="overflow-hidden rounded-lg border border-slate-700/70">
+                <source srcset={screenshot.webp} type="image/webp" />
+                <img
+                  class="block h-auto w-full"
+                  src={screenshot.jpg}
+                  alt={screenshot.alt}
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <figcaption class="grid gap-1">
+                <span class="text-sm font-semibold text-slate-50">{screenshot.title}</span>
+                <span class="text-sm text-slate-300">{screenshot.description}</span>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>

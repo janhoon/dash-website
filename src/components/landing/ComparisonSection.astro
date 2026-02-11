@@ -1,0 +1,81 @@
+<section id="comparison" class="section-card" aria-labelledby="comparison-title">
+  <h2 id="comparison-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">Dash vs Grafana comparison for self-hosted monitoring teams</h2>
+  <p class="mt-4 max-w-3xl text-slate-300">
+    Use this honest comparison table to evaluate how Dash and Grafana differ in deployment,
+    migration, and day-to-day observability workflows.
+  </p>
+
+  <div class="mt-5 overflow-x-auto rounded-xl border border-slate-700/70 bg-slate-800/65">
+    <table class="min-w-[760px] w-full border-collapse text-left text-sm text-slate-200">
+      <caption class="px-4 pt-4 pb-2 text-left text-xs text-slate-400">
+        Feature comparison across dashboarding, access control, and migration workflows.
+      </caption>
+      <thead>
+        <tr class="border-b border-slate-700/70 font-mono text-xs uppercase tracking-[0.07em] text-slate-400">
+          <th scope="col" class="px-4 py-3">Feature</th>
+          <th scope="col" class="px-4 py-3">Dash</th>
+          <th scope="col" class="px-4 py-3">Grafana</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="w-[28%] px-4 py-3 text-slate-50">Deployment model</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Self-hosted first with straightforward local setup</td>
+          <td class="px-4 py-3 text-slate-300">Cloud and self-hosted options with broader product surface</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Source model</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Open-source codebase focused on core monitoring workflows</td>
+          <td class="px-4 py-3 text-slate-300">Open-source core with enterprise and cloud offerings</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Prometheus metrics</th>
+          <td class="px-4 py-3 text-slate-300">Native support for Prometheus-compatible metrics queries</td>
+          <td class="px-4 py-3 text-slate-300">Native support for Prometheus-compatible metrics queries</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Loki logs</th>
+          <td class="px-4 py-3 text-slate-300">Integrated Explore flow for logs and related telemetry</td>
+          <td class="px-4 py-3 text-slate-300">Integrated Explore flow for logs and related telemetry</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Tempo traces</th>
+          <td class="px-4 py-3 text-slate-300">Trace search and timeline views in the same app shell</td>
+          <td class="px-4 py-3 text-slate-300">Trace support through Tempo integrations and trace views</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Dashboard migration</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Built-in Grafana conversion flow and YAML import path</td>
+          <td class="px-4 py-3 text-slate-300">Native format for existing Grafana JSON dashboards</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Configuration as code</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">YAML export and import for reproducible reviewable changes</td>
+          <td class="px-4 py-3 text-slate-300">JSON export commonly used for dashboard portability</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Organization access control</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Admin, editor, and viewer roles are simple to apply</td>
+          <td class="px-4 py-3 text-slate-300">Role behavior varies by deployment and edition</td>
+        </tr>
+        <tr class="border-b border-slate-700/50 align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">SSO administration</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Provider setup available in organization settings</td>
+          <td class="px-4 py-3 text-slate-300">Provider setup depends on deployment mode and edition features</td>
+        </tr>
+        <tr class="align-top">
+          <th scope="row" class="px-4 py-3 text-slate-50">Operational scope</th>
+          <td class="bg-teal-500/10 px-4 py-3 text-slate-100">Streamlined UX centered on monitoring and incident triage</td>
+          <td class="px-4 py-3 text-slate-300">Broad ecosystem with many plugins and product extensions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-4 max-w-4xl text-sm text-slate-300">
+    Dash is a strong fit for teams that want open-source, self-hosted monitoring with
+    metrics, logs, traces, and access control in one focused workflow. Grafana remains a
+    mature option with a larger ecosystem, which can be useful when broad plugin coverage is
+    the top priority.
+  </p>
+</section>

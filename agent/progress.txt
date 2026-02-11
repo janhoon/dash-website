@@ -1,0 +1,10 @@
+# Progress Log
+
+## Project Setup - 2026-02-11 22:55 UTC
+- Created dash-website repository
+- Astro project initialized
+- Images copied from Dash repo
+- robots.txt and sitemap.xml copied
+- Ralph agent configured
+
+Ready to convert Vue landing page to Astro format.
