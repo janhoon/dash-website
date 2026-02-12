@@ -14,7 +14,7 @@ export const screenshotGallery: LandingScreenshot[] = [
     description: 'Interactive monitoring overview with metrics, logs, and traces in one dashboard.',
     webp: '/landing-dashboard.webp',
     jpg: '/landing-dashboard.jpg',
-    alt: 'Dash monitoring dashboard screenshot showing KPI panels, log stream, and trace timeline overview',
+    alt: 'Ace monitoring dashboard screenshot showing KPI panels, log stream, and trace timeline overview',
   },
   {
     id: 'datasource-config',
@@ -23,7 +23,7 @@ export const screenshotGallery: LandingScreenshot[] = [
       'Configure Prometheus, Loki, Tempo, and VictoriaMetrics datasources with auth and health checks.',
     webp: '/landing-datasources.webp',
     jpg: '/landing-datasources.jpg',
-    alt: 'Dash datasource settings screenshot with Prometheus, Loki, Tempo, and VictoriaMetrics connection options',
+    alt: 'Ace datasource settings screenshot with Prometheus, Loki, Tempo, and VictoriaMetrics connection options',
   },
   {
     id: 'query-editor',
@@ -31,7 +31,7 @@ export const screenshotGallery: LandingScreenshot[] = [
     description: 'Build and tune observability queries with instant result previews for incident response.',
     webp: '/landing-query-editor.webp',
     jpg: '/landing-query-editor.jpg',
-    alt: 'Dash query editor screenshot with datasource selector, query input, and live chart result preview',
+    alt: 'Ace query editor screenshot with datasource selector, query input, and live chart result preview',
   },
   {
     id: 'alerts',
@@ -39,7 +39,7 @@ export const screenshotGallery: LandingScreenshot[] = [
     description: 'Create alert rules tied to dashboards and investigate incidents with related telemetry.',
     webp: '/landing-alerts.webp',
     jpg: '/landing-alerts.jpg',
-    alt: 'Dash alerting screenshot showing alert rules list, severity indicators, and recent alert history',
+    alt: 'Ace alerting screenshot showing alert rules list, severity indicators, and recent alert history',
   },
   {
     id: 'organization-settings',
@@ -47,7 +47,7 @@ export const screenshotGallery: LandingScreenshot[] = [
     description: 'Manage team members, SSO providers, and role-based permissions for secure access control.',
     webp: '/landing-org-settings.webp',
     jpg: '/landing-org-settings.jpg',
-    alt: 'Dash organization settings screenshot with member management, groups, and authentication providers',
+    alt: 'Ace organization settings screenshot with member management, groups, and authentication providers',
   },
   {
     id: 'dark-theme',
@@ -55,19 +55,19 @@ export const screenshotGallery: LandingScreenshot[] = [
     description: 'Use low-glare dark theme layouts for clear observability during on-call and overnight work.',
     webp: '/landing-dark-theme.webp',
     jpg: '/landing-dark-theme.jpg',
-    alt: 'Dash dark theme screenshot showing dashboard panels with high-contrast metrics and log visualization',
+    alt: 'Ace dark theme screenshot showing dashboard panels with high-contrast metrics and log visualization',
   },
 ];
 
 const softwareApplicationStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'Dash',
+  name: 'Ace Observability',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Linux, macOS, Windows',
-  softwareHelp: 'https://github.com/janhoon/dash#readme',
-  url: 'https://github.com/janhoon/dash',
-  downloadUrl: 'https://github.com/janhoon/dash',
+  softwareHelp: 'https://github.com/janhoon/ace#readme',
+  url: 'https://github.com/janhoon/ace',
+  downloadUrl: 'https://github.com/janhoon/ace',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -90,18 +90,18 @@ const faqStructuredData = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Which datasources does Dash support?',
+      name: 'Which datasources does Ace support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Dash supports Prometheus-compatible metrics, Loki logs, Tempo traces, and VictoriaMetrics backends for self-hosted monitoring workflows.',
+        text: 'Ace supports Prometheus-compatible metrics, Loki logs, Tempo traces, and VictoriaMetrics backends for self-hosted monitoring workflows.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can teams self-host Dash?',
+      name: 'Can teams self-host Ace?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Dash is open source and designed for self-hosted deployments with role-based access control and organization-level settings.',
+        text: 'Yes. Ace is open source and designed for self-hosted deployments with role-based access control and organization-level settings.',
       },
     },
   ],
@@ -110,7 +110,7 @@ const faqStructuredData = {
 const featureListStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Dash monitoring platform features',
+  name: 'Ace monitoring platform features',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -124,14 +124,14 @@ const featureListStructuredData = {
       position: 2,
       name: 'Self-hosted monitoring control',
       description:
-        'Deploy Dash in your own infrastructure for secure, open-source observability without vendor lock-in.',
+        'Deploy Ace in your own infrastructure for secure, open-source observability without vendor lock-in.',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Grafana-compatible migration path',
       description:
-        'Import Grafana dashboards and convert panel configurations into Dash for easier migration from legacy tooling.',
+        'Import Grafana dashboards and convert panel configurations into Ace for easier migration from legacy tooling.',
     },
     {
       '@type': 'ListItem',
@@ -160,73 +160,73 @@ const featureListStructuredData = {
 const comparisonTableStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'Table',
-  name: 'Dash vs Grafana feature comparison',
+  name: 'Ace vs Grafana feature comparison',
   about: {
     '@type': 'SoftwareApplication',
-    name: 'Dash',
+    name: 'Ace Observability',
   },
   description:
-    'Feature comparison table between Dash and Grafana across deployment model, access control, and dashboard workflows.',
+    'Feature comparison table between Ace and Grafana across deployment model, access control, and dashboard workflows.',
   hasPart: [
     {
       '@type': 'ListItem',
       position: 1,
       name: 'Self-hosted deployment',
-      description: 'Dash: built for self-hosted teams. Grafana: supports cloud and self-hosted.',
+      description: 'Ace: built for self-hosted teams. Grafana: supports cloud and self-hosted.',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Open-source code access',
-      description: 'Dash: open source. Grafana: open source core with enterprise/cloud offerings.',
+      description: 'Ace: open source. Grafana: open source core with enterprise/cloud offerings.',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Prometheus metrics',
-      description: 'Both Dash and Grafana support Prometheus-compatible metrics.',
+      description: 'Both Ace and Grafana support Prometheus-compatible metrics.',
     },
     {
       '@type': 'ListItem',
       position: 4,
       name: 'Loki logs',
-      description: 'Both Dash and Grafana support Loki log exploration.',
+      description: 'Both Ace and Grafana support Loki log exploration.',
     },
     {
       '@type': 'ListItem',
       position: 5,
       name: 'Tempo traces',
-      description: 'Both Dash and Grafana support Tempo trace exploration.',
+      description: 'Both Ace and Grafana support Tempo trace exploration.',
     },
     {
       '@type': 'ListItem',
       position: 6,
       name: 'YAML dashboard workflow',
-      description: 'Dash: first-class YAML export and import workflow. Grafana: JSON-focused export by default.',
+      description: 'Ace: first-class YAML export and import workflow. Grafana: JSON-focused export by default.',
     },
     {
       '@type': 'ListItem',
       position: 7,
       name: 'Organization role model',
-      description: 'Dash: simple admin/editor/viewer model. Grafana: role model varies by edition and deployment.',
+      description: 'Ace: simple admin/editor/viewer model. Grafana: role model varies by edition and deployment.',
     },
     {
       '@type': 'ListItem',
       position: 8,
       name: 'SSO provider setup',
-      description: 'Dash: org settings include provider setup. Grafana: SSO setup depends on deployment and edition.',
+      description: 'Ace: org settings include provider setup. Grafana: SSO setup depends on deployment and edition.',
     },
     {
       '@type': 'ListItem',
       position: 9,
       name: 'Dashboard import migration',
-      description: 'Dash: includes Grafana conversion flow for migration. Grafana: native for Grafana JSON dashboards.',
+      description: 'Ace: includes Grafana conversion flow for migration. Grafana: native for Grafana JSON dashboards.',
     },
     {
       '@type': 'ListItem',
       position: 10,
       name: 'Operational focus',
-      description: 'Dash: focused scope for observability teams that want a streamlined workflow.',
+      description: 'Ace: focused scope for observability teams that want a streamlined workflow.',
     },
   ],
 };
@@ -244,7 +244,7 @@ const breadcrumbStructuredData = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Dash vs Grafana Comparison',
+      name: 'Ace vs Grafana Comparison',
       item: '/#comparison',
     },
   ],
@@ -253,9 +253,9 @@ const breadcrumbStructuredData = {
 const imageGalleryStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'ImageGallery',
-  name: 'Dash monitoring platform screenshot gallery',
+  name: 'Ace monitoring platform screenshot gallery',
   description:
-    'Screenshot gallery covering Dash dashboards, datasource setup, query editor, alerts, organization settings, and dark theme.',
+    'Screenshot gallery covering Ace dashboards, datasource setup, query editor, alerts, organization settings, and dark theme.',
   hasPart: screenshotGallery.map((screenshot, index) => ({
     '@type': 'ImageObject',
     position: index + 1,
@@ -269,9 +269,9 @@ const imageGalleryStructuredData = {
 const organizationStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Dash',
-  url: 'https://github.com/janhoon/dash',
-  sameAs: ['https://github.com/janhoon/dash'],
+  name: 'Ace Observability',
+  url: 'https://github.com/janhoon/ace',
+  sameAs: ['https://github.com/janhoon/ace'],
 };
 
 const siteNavigationStructuredData = {
