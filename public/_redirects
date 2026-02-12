@@ -1,0 +1,16 @@
+## Cloudflare Pages Redirects
+## https://developers.cloudflare.com/pages/configuration/redirects/
+
+## Force HTTPS (handled by CF Pages by default, but can be explicit)
+# http://aceobservability.com/* https://aceobservability.com/:splat 301
+# http://www.aceobservability.com/* https://aceobservability.com/:splat 301
+
+## WWW to non-WWW redirect (if needed)
+# https://www.aceobservability.com/* https://aceobservability.com/:splat 301
+
+## Example: Redirect old paths (add as needed)
+# /old-path /new-path 301
+# /docs/* /documentation/:splat 301
+
+## SPA fallback (uncomment if you need client-side routing)
+# /* /index.html 200

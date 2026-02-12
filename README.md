@@ -38,17 +38,57 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Analytics (PostHog)
+## Environment Variables
 
-Landing-page interest tracking is integrated with PostHog.
+This project uses environment variables for configuration. Create a `.env` file in the root:
 
-1. Copy `.env.example` to `.env`.
-2. Set `PUBLIC_POSTHOG_KEY` to your PostHog project API key.
-3. Optionally set `PUBLIC_POSTHOG_HOST` (defaults to `https://us.i.posthog.com`).
+```bash
+cp .env.example .env
+```
 
-Tracked events:
-- `landing_interest_page_viewed`
-- `landing_interest_clicked`
+### Available Variables
+
+| Variable | Required | Description | Default |
+|----------|----------|-------------|---------|
+| `PUBLIC_POSTHOG_KEY` | No | PostHog project API key for analytics | - |
+| `PUBLIC_POSTHOG_HOST` | No | PostHog API host URL | `https://us.i.posthog.com` |
+
+> **Note:** Variables prefixed with `PUBLIC_` are exposed to the browser and included in the client bundle.
+
+### Analytics (PostHog)
+
+Landing-page interest tracking is integrated with PostHog:
+
+**Tracked events:**
+- `landing_interest_page_viewed` - When landing page is viewed
+- `landing_interest_clicked` - When CTA button is clicked
+
+To enable analytics:
+1. Get your PostHog API key from [PostHog Project Settings](https://app.posthog.com/project/settings)
+2. Set `PUBLIC_POSTHOG_KEY` in `.env` (local) or environment variables (production)
+3. Optionally customize `PUBLIC_POSTHOG_HOST` if using self-hosted PostHog
+
+## Deployment
+
+This site is configured for **Cloudflare Pages** deployment.
+
+### Quick Deploy
+
+1. Connect your repository to Cloudflare Pages
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Add environment variables (see above)
+5. Deploy!
+
+**📖 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)**
+
+### Build Output
+
+The project is configured with the `@astrojs/cloudflare` adapter:
+- **Output mode**: `static` (pre-rendered at build time)
+- **Adapter mode**: `directory` (CF Pages compatible)
+- **Security headers**: Configured in `public/_headers`
+- **Redirects**: Configured in `public/_redirects`
 
 ## 👀 Want to learn more?
 
