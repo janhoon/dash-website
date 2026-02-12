@@ -38,6 +38,18 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## Analytics (PostHog)
+
+Landing-page interest tracking is integrated with PostHog.
+
+1. Copy `.env.example` to `.env`.
+2. Set `PUBLIC_POSTHOG_KEY` to your PostHog project API key.
+3. Optionally set `PUBLIC_POSTHOG_HOST` (defaults to `https://us.i.posthog.com`).
+
+Tracked events:
+- `landing_interest_page_viewed`
+- `landing_interest_clicked`
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

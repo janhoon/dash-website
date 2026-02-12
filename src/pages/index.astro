@@ -12,7 +12,7 @@ import { structuredDataPayloads } from '../data/landing';
 
 const pageTitle = 'Dash | Open-Source Monitoring Dashboard';
 const pageDescription =
-  'Dash is an open-source monitoring dashboard with multi-datasource support for Prometheus, Loki, Tempo, and VictoriaMetrics.';
+  'Dash is a truly open-source monitoring dashboard for metrics, logs, and traces with no paid tiers or license-gated features.';
 const pageUrl = '/';
 ---
 
@@ -34,12 +34,12 @@ const pageUrl = '/';
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={pageUrl} />
-    <meta property="og:image" content="/landing-hero.webp" />
+    <meta property="og:image" content="/landing-hero.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content="/landing-hero.webp" />
+    <meta name="twitter:image" content="/landing-hero.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -82,5 +82,42 @@ const pageUrl = '/';
     </main>
 
     <FooterSection />
+
+    <script>
+      const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY;
+      const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
+
+      if (posthogKey) {
+        void import('posthog-js').then(({ default: posthog }) => {
+          posthog.init(posthogKey, {
+            api_host: posthogHost,
+            capture_pageview: true,
+            capture_pageleave: true,
+          });
+
+          posthog.capture('landing_interest_page_viewed', {
+            page: window.location.pathname,
+            title: document.title,
+          });
+
+          for (const element of document.querySelectorAll('[data-track-interest]')) {
+            element.addEventListener('click', () => {
+              if (!(element instanceof HTMLElement)) {
+                return;
+              }
+
+              const targetHref = element instanceof HTMLAnchorElement ? element.href : '';
+
+              posthog.capture('landing_interest_clicked', {
+                interest: element.dataset.trackInterest || 'unknown',
+                location: element.dataset.trackLocation || 'unknown',
+                label: element.dataset.trackLabel || element.textContent?.trim() || 'unknown',
+                href: targetHref,
+              });
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
