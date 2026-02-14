@@ -44,9 +44,9 @@
       "Cloudflare Pages environment config",
       "Performance optimization (async loading)",
       "No Lighthouse score regression",
-      "PostHog Host: https://eu.posthog.com (EU region)",
+      "PostHog Host: https://eu.i.posthog.com (EU region)",
       "API Key: phc_SufADq1sXKA8eN4wSAMaAmIPwWVP3GR9mcPaE8xcJLW",
-      "Config: PUBLIC_POSTHOG_HOST=https://eu.posthog.com",
+      "Config: PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com",
       "Config: PUBLIC_POSTHOG_KEY=phc_SufADq1sXKA8eN4wSAMaAmIPwWVP3GR9mcPaE8xcJLW"
     ],
     "passes": false
