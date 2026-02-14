@@ -17,5 +17,34 @@
       "Lighthouse SEO score > 95"
     ],
     "passes": false
+  },
+  {
+    "id": "POSTHOG-WEBSITE-001",
+    "name": "PostHog Website Analytics - Astro Landing Page",
+    "category": "Analytics/Website",
+    "task_size": "medium",
+    "fizzy_ticket": 251,
+    "description": "Integrate PostHog analytics into the Ace Observability website for marketing analytics and conversion tracking.",
+    "depends_on": [],
+    "unblocks": [],
+    "requirements": [
+      "Install PostHog JS SDK",
+      "Create Analytics.astro component",
+      "Track page views automatically",
+      "Track waitlist form submissions",
+      "Track all CTA clicks (Get Started, Demo, GitHub, Docs)",
+      "Track feature section engagement (scroll, clicks)",
+      "Track Grafana converter usage",
+      "Session recording with masking",
+      "Cookie consent banner",
+      "Privacy policy page",
+      "DNT header respect",
+      "Conversion funnel setup",
+      "A/B testing support via feature flags",
+      "Cloudflare Pages environment config",
+      "Performance optimization (async loading)",
+      "No Lighthouse score regression"
+    ],
+    "passes": false
   }
 ]
