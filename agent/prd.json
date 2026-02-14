@@ -45,9 +45,9 @@
       "Performance optimization (async loading)",
       "No Lighthouse score regression",
       "PostHog Host: https://eu.i.posthog.com (EU region)",
-      "API Key: phc_SufADq1sXKA8eN4wSAMaAmIPwWVP3GR9mcPaE8xcJLW",
+      "API Key: TBD (create Ace Marketing project in PostHog)",
       "Config: PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com",
-      "Config: PUBLIC_POSTHOG_KEY=phc_SufADq1sXKA8eN4wSAMaAmIPwWVP3GR9mcPaE8xcJLW"
+      "Config: PUBLIC_POSTHOG_KEY=TBD"
     ],
     "passes": false
   }
