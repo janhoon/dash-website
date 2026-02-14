@@ -83,41 +83,5 @@ const pageUrl = '/';
 
     <FooterSection />
 
-    <script>
-      const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY;
-      const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
-
-      if (posthogKey) {
-        void import('posthog-js').then(({ default: posthog }) => {
-          posthog.init(posthogKey, {
-            api_host: posthogHost,
-            capture_pageview: true,
-            capture_pageleave: true,
-          });
-
-          posthog.capture('landing_interest_page_viewed', {
-            page: window.location.pathname,
-            title: document.title,
-          });
-
-          for (const element of document.querySelectorAll('[data-track-interest]')) {
-            element.addEventListener('click', () => {
-              if (!(element instanceof HTMLElement)) {
-                return;
-              }
-
-              const targetHref = element instanceof HTMLAnchorElement ? element.href : '';
-
-              posthog.capture('landing_interest_clicked', {
-                interest: element.dataset.trackInterest || 'unknown',
-                location: element.dataset.trackLocation || 'unknown',
-                label: element.dataset.trackLabel || element.textContent?.trim() || 'unknown',
-                href: targetHref,
-              });
-            });
-          }
-        });
-      }
-    </script>
   </body>
 </html>
