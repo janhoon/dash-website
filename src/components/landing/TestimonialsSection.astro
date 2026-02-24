@@ -1,0 +1,47 @@
+---
+const testimonials = [
+  {
+    quote:
+      'We migrated from Grafana Cloud in a weekend. Having metrics, logs, and traces in one self-hosted tool cut our debugging time in half.',
+    name: 'Marta Kowalski',
+    role: 'SRE Lead, Kubert Systems',
+  },
+  {
+    quote:
+      'The Grafana dashboard import actually worked. Dropped in our JSON files and everything rendered correctly — no manual re-creation.',
+    name: 'Daniel Osei',
+    role: 'Platform Engineer, Meridian Health',
+  },
+  {
+    quote:
+      'No feature gates. No surprise invoices. Our team has full access to alerting, SSO, and RBAC without negotiating an enterprise contract.',
+    name: 'Yuki Tanaka',
+    role: 'DevOps Manager, Flyweight Labs',
+  },
+];
+---
+
+<section id="testimonials" class="section-band bg-[#0a1628]" aria-labelledby="testimonials-title">
+  <div class="section-inner">
+    <h2 id="testimonials-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">What engineers are saying</h2>
+    <p class="mt-4 max-w-3xl text-slate-300">Teams running Ace in production share their experience.</p>
+
+    <ul class="mt-8 grid list-none gap-6 p-0 md:grid-cols-3" aria-label="User testimonials">
+      {
+        testimonials.map((t) => (
+          <li class="m-0">
+            <blockquote class="grid h-full gap-4 rounded-xl border border-slate-700/50 bg-[#0f1d32] p-6">
+              <p class="m-0 text-sm italic leading-relaxed text-slate-300">&ldquo;{t.quote}&rdquo;</p>
+              <footer class="mt-auto">
+                <cite class="not-italic">
+                  <span class="block text-sm font-semibold text-slate-100">{t.name}</span>
+                  <span class="block text-xs text-slate-400">{t.role}</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

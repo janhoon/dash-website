@@ -1,0 +1,19 @@
+---
+const stats = [
+  { value: '8+', label: 'Datasources' },
+  { value: '100%', label: 'Open Source' },
+  { value: '16K+', label: 'GitHub Stars' },
+  { value: 'Zero', label: 'Paid Tiers' },
+];
+---
+
+<div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-slate-700/60" aria-label="Key product stats">
+  {
+    stats.map((stat) => (
+      <div class="flex flex-col items-center text-center md:px-6">
+        <span class="text-4xl font-bold text-amber-400 md:text-5xl">{stat.value}</span>
+        <span class="mt-1 text-sm text-slate-400">{stat.label}</span>
+      </div>
+    ))
+  }
+</div>

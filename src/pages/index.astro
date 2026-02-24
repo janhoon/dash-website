@@ -4,8 +4,10 @@ import HeaderNav from '../components/landing/HeaderNav.astro';
 import HeroSection from '../components/landing/HeroSection.astro';
 import OverviewSection from '../components/landing/OverviewSection.astro';
 import FeaturesSection from '../components/landing/FeaturesSection.astro';
+import TestimonialsSection from '../components/landing/TestimonialsSection.astro';
 import ComparisonSection from '../components/landing/ComparisonSection.astro';
 import ScreenshotsSection from '../components/landing/ScreenshotsSection.astro';
+import TiersSection from '../components/landing/TiersSection.astro';
 import CtaSection from '../components/landing/CtaSection.astro';
 import FooterSection from '../components/landing/FooterSection.astro';
 import { structuredDataPayloads } from '../data/landing';
@@ -56,18 +58,18 @@ const pageUrl = '/';
     }
   </head>
 
-  <body class="site-sheen px-3 py-4 md:px-6 md:py-6">
+  <body class="site-sheen">
     <a
       href="#main-content"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-30 focus:rounded-md focus:bg-teal-400 focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-30 focus:rounded-md focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950"
     >
       Skip to main content
     </a>
 
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div class="absolute -top-40 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-teal-500/20 blur-3xl"></div>
-      <div class="absolute bottom-0 left-[-10%] h-[20rem] w-[20rem] rounded-full bg-cyan-500/10 blur-3xl"></div>
-      <div class="absolute right-[-8%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2 rounded-full bg-emerald-400/10 blur-3xl"></div>
+      <div class="absolute -top-40 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-amber-500/10 blur-3xl"></div>
+      <div class="absolute bottom-0 left-[-10%] h-[20rem] w-[20rem] rounded-full bg-amber-400/5 blur-3xl"></div>
+      <div class="absolute right-[-8%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2 rounded-full bg-amber-500/5 blur-3xl"></div>
     </div>
 
     <HeaderNav />
@@ -76,8 +78,10 @@ const pageUrl = '/';
       <HeroSection />
       <OverviewSection />
       <FeaturesSection />
+      <TestimonialsSection />
       <ComparisonSection />
       <ScreenshotsSection />
+      <TiersSection />
       <CtaSection />
     </main>
 

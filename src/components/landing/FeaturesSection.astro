@@ -60,26 +60,28 @@ const featureCards: FeatureCard[] = [
 ];
 ---
 
-<section id="features" class="section-card" aria-labelledby="features-title">
-  <h2 id="features-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">Core Ace features for modern observability teams</h2>
-  <p class="mt-4 max-w-3xl text-slate-300">
-    Ace combines dashboards, querying, alerting, and access control in one open-source product with no
-    paid-only features.
-  </p>
+<section id="features" class="section-band bg-[#020617]" aria-labelledby="features-title">
+  <div class="section-inner">
+    <h2 id="features-title" class="m-0 text-2xl font-semibold text-slate-50 md:text-3xl">Core Ace features for modern observability teams</h2>
+    <p class="mt-4 max-w-3xl text-slate-300">
+      Ace combines dashboards, querying, alerting, and access control in one open-source product with no
+      paid-only features.
+    </p>
 
-  <ul class="mt-6 grid list-none gap-3 p-0 md:grid-cols-2 xl:grid-cols-3" aria-label="Ace platform feature list">
-    {
-      featureCards.map((feature) => (
-        <li class="m-0">
-          <article aria-labelledby={feature.id} class="grid h-full gap-3 rounded-xl border border-slate-700/70 bg-slate-800/70 p-4 shadow-[0_8px_24px_rgba(2,8,23,0.28)]">
-            <svg viewBox="0 0 24 24" role="img" aria-label={feature.iconLabel} class="h-7 w-7 stroke-teal-300" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              {feature.paths.map((path) => <path d={path}></path>)}
-            </svg>
-            <h3 id={feature.id} class="m-0 text-sm font-semibold leading-6 text-slate-50">{feature.title}</h3>
-            <p class="m-0 text-sm text-slate-300">{feature.description}</p>
-          </article>
-        </li>
-      ))
-    }
-  </ul>
+    <ul class="mt-6 grid list-none gap-3 p-0 md:grid-cols-2 xl:grid-cols-3" aria-label="Ace platform feature list">
+      {
+        featureCards.map((feature) => (
+          <li class="m-0">
+            <article aria-labelledby={feature.id} class="grid h-full gap-3 rounded-xl border border-slate-700/50 bg-[#0a1628] p-4">
+              <svg viewBox="0 0 24 24" role="img" aria-label={feature.iconLabel} class="h-7 w-7 stroke-amber-400" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                {feature.paths.map((path) => <path d={path}></path>)}
+              </svg>
+              <h3 id={feature.id} class="m-0 text-sm font-semibold leading-6 text-slate-50">{feature.title}</h3>
+              <p class="m-0 text-sm text-slate-300">{feature.description}</p>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>
