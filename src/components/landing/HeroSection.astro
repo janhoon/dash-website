@@ -2,23 +2,23 @@
 import StatsBar from './StatsBar.astro';
 ---
 
-<section class="section-band bg-[#020617] pt-10 md:pt-16" aria-labelledby="landing-title">
+<section class="section-band dark-section pt-10 md:pt-16" aria-labelledby="landing-title">
   <div class="section-inner">
     <div class="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center">
       <div>
-        <p class="m-0 font-mono text-xs uppercase tracking-[0.17em] text-amber-400">100% open source observability</p>
-        <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-semibold leading-tight text-slate-50 md:text-5xl">Ace Observability is a truly open-source dashboard for metrics, logs, and traces.</h1>
+        <p class="m-0 font-mono text-xs uppercase tracking-[0.17em] text-emerald-400">Open-source observability</p>
+        <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-semibold leading-tight md:text-5xl">Ace is a truly open-source dashboard for metrics, logs, and traces.</h1>
         <p class="mt-4 max-w-2xl text-base text-slate-300">
-          Query Prometheus, Loki, Tempo, and VictoriaMetrics from one interface. No Grafana Cloud required.
+          One place for Prometheus metrics, Loki logs, Tempo traces, and VictoriaMetrics — built for teams that need fast answers with no license-gated features.
         </p>
 
         <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a class="rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-slate-950 no-underline shadow-lg shadow-amber-500/20 transition hover:bg-amber-400" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">Get Started Free</a>
-          <a class="rounded-lg border border-slate-600/80 px-5 py-2.5 text-sm font-semibold text-slate-100 no-underline transition hover:border-amber-400/70 hover:text-amber-300" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">View on GitHub</a>
+          <a class="rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-emerald-700" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">Get Started Free</a>
+          <a class="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 no-underline transition hover:border-slate-400 hover:text-white" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">View on GitHub</a>
         </div>
       </div>
 
-      <div class="overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950/70 shadow-[0_12px_34px_rgba(2,8,23,0.4)]" aria-label="Ace application preview">
+      <div class="overflow-hidden rounded-xl border border-slate-700 bg-slate-950" aria-label="Ace application preview">
         <picture>
           <source srcset="/landing-hero.webp" type="image/webp" />
           <img
