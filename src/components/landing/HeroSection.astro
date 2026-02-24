@@ -1,36 +1,39 @@
-<section class="section-card grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center" aria-labelledby="landing-title">
-  <div>
-    <p class="m-0 font-mono text-xs uppercase tracking-[0.17em] text-teal-300">100% open source observability</p>
-    <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-semibold leading-tight text-slate-50 md:text-5xl">Ace Observability is a truly open-source dashboard for metrics, logs, and traces.</h1>
-    <p class="mt-4 max-w-2xl text-base text-slate-300">
-      It solves scattered monitoring with one place to query Prometheus,
-      VictoriaMetrics, Loki, and Tempo, with no paid tiers or license-gated features.
-    </p>
+---
+import StatsBar from './StatsBar.astro';
+---
 
-    <ul class="mt-5 list-disc space-y-1.5 pl-5 text-sm text-slate-300" aria-label="Core dashboard capabilities">
-      <li>Use every feature in the open-source core with no enterprise feature gates</li>
-      <li>Run self-hosted in your own environment with role-based access control</li>
-      <li>Import and export dashboards as YAML for reproducible configuration</li>
-    </ul>
+<section class="section-band bg-[#020617] pt-10 md:pt-16" aria-labelledby="landing-title">
+  <div class="section-inner">
+    <div class="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center">
+      <div>
+        <p class="m-0 font-mono text-xs uppercase tracking-[0.17em] text-amber-400">100% open source observability</p>
+        <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-semibold leading-tight text-slate-50 md:text-5xl">Ace Observability is a truly open-source dashboard for metrics, logs, and traces.</h1>
+        <p class="mt-4 max-w-2xl text-base text-slate-300">
+          Query Prometheus, Loki, Tempo, and VictoriaMetrics from one interface. No Grafana Cloud required.
+        </p>
 
-    <div class="mt-6 flex flex-wrap items-center gap-3">
-      <a class="rounded-lg bg-gradient-to-r from-teal-400 to-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 no-underline shadow-lg shadow-teal-500/20 transition hover:brightness-110" href="https://github.com/janhoon/ace/stargazers" target="_blank" rel="noreferrer">Star on GitHub</a>
-      <a class="rounded-lg border border-slate-600/80 bg-slate-800/75 px-4 py-2 text-sm font-semibold text-slate-100 no-underline transition hover:border-teal-300/70 hover:text-teal-200" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">Get Started</a>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a class="rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-slate-950 no-underline shadow-lg shadow-amber-500/20 transition hover:bg-amber-400" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">Get Started Free</a>
+          <a class="rounded-lg border border-slate-600/80 px-5 py-2.5 text-sm font-semibold text-slate-100 no-underline transition hover:border-amber-400/70 hover:text-amber-300" href="https://github.com/janhoon/ace" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950/70 shadow-[0_12px_34px_rgba(2,8,23,0.4)]" aria-label="Ace application preview">
+        <picture>
+          <source srcset="/landing-hero.webp" type="image/webp" />
+          <img
+            class="block h-auto w-full"
+            src="/landing-hero.jpg"
+            alt="Ace monitoring dashboard screenshot showing metrics, logs, and traces panels"
+            width="1600"
+            height="900"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+      </div>
     </div>
-  </div>
 
-  <div class="overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950/70 shadow-[0_12px_34px_rgba(2,8,23,0.4)]" aria-label="Ace application preview">
-    <picture>
-      <source srcset="/landing-hero.webp" type="image/webp" />
-      <img
-        class="block h-auto w-full"
-        src="/landing-hero.jpg"
-        alt="Ace monitoring dashboard screenshot showing metrics, logs, and traces panels"
-        width="1600"
-        height="900"
-        loading="eager"
-        decoding="async"
-      />
-    </picture>
+    <StatsBar />
   </div>
 </section>

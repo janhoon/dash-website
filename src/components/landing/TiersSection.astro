@@ -1,0 +1,76 @@
+---
+const openSourceFeatures = [
+  'All dashboard and query features',
+  'Prometheus, Loki, Tempo, VictoriaMetrics',
+  'Grafana dashboard import',
+  'Alerting with datasource queries',
+  'Light and dark themes',
+  'YAML configuration as code',
+  'Self-hosted in your environment',
+  'Free forever — MIT licence',
+];
+
+const proFeatures = [
+  'Everything in Open Source',
+  'Priority support channels',
+  'SSO with Google & Microsoft',
+  'Team and member management',
+  'Role-based access control',
+  'Organisation-level settings',
+  'SLA guarantees',
+  'Dedicated onboarding',
+];
+---
+
+<section id="tiers" class="section-band bg-[#020617]" aria-labelledby="tiers-title">
+  <div class="section-inner">
+    <h2 id="tiers-title" class="m-0 text-center text-2xl font-semibold text-slate-50 md:text-3xl">Everything you need. No paid tiers.</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-slate-300">
+      Both options give you the full product. Choose the deployment model that fits your team.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="rounded-xl border border-slate-700/50 bg-[#0a1628] p-8">
+        <h3 class="m-0 text-lg font-semibold text-slate-50">Open Source</h3>
+        <p class="mt-2 text-sm text-slate-400">Full-featured. Self-hosted. MIT licence.</p>
+        <ul class="mt-6 grid list-none gap-3 p-0">
+          {
+            openSourceFeatures.map((f) => (
+              <li class="flex items-start gap-2 text-sm text-slate-300">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                {f}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-amber-500/30 bg-[#0a1628] p-8">
+        <h3 class="m-0 text-lg font-semibold text-amber-400">Self-Hosted Pro</h3>
+        <p class="mt-2 text-sm text-slate-400">Everything in Open Source, plus team features.</p>
+        <ul class="mt-6 grid list-none gap-3 p-0">
+          {
+            proFeatures.map((f) => (
+              <li class="flex items-start gap-2 text-sm text-slate-300">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                {f}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
