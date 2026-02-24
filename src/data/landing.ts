@@ -277,8 +277,8 @@ const organizationStructuredData = {
 const siteNavigationStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'SiteNavigationElement',
-  name: ['Overview', 'Features', 'Comparison', 'Screenshots', 'Get Started'],
-  url: ['/#overview', '/#features', '/#comparison', '/#screenshots', '/login'],
+  name: ['Features', 'Comparison', 'Pricing', 'Get Started'],
+  url: ['/#features', '/#comparison', '/#tiers', '/login'],
 };
 
 export const structuredDataPayloads = [
