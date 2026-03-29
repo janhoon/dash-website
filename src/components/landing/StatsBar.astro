@@ -44,15 +44,20 @@ const stats = [
   }
 </div>
 
-<script>
-  fetch('https://api.github.com/repos/aceobservability/ace')
-    .then(r => r.json())
-    .then(data => {
-      const el = document.getElementById('gh-stars');
-      if (el && typeof data.stargazers_count === 'number') {
-        const count = data.stargazers_count;
-        el.textContent = count >= 1000 ? `${(count / 1000).toFixed(1).replace(/\.0$/, '')}K` : String(count);
-      }
-    })
-    .catch(() => {});
+<script is:inline>
+  (function() {
+    var el = document.getElementById('gh-stars');
+    if (!el) return;
+    fetch('https://api.github.com/repos/aceobservability/ace')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (typeof data.stargazers_count === 'number') {
+          var count = data.stargazers_count;
+          el.textContent = count >= 1000 ? (count / 1000).toFixed(1).replace(/\.0$/, '') + 'K' : String(count);
+        }
+      })
+      .catch(function() {
+        el.textContent = '—';
+      });
+  })();
 </script>
