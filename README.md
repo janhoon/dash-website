@@ -1,8 +1,18 @@
-# Ace Observability — Website
+<p align="center">
+  <img src="public/ace-logo.png" alt="Ace Observability" width="200" />
+</p>
 
-Landing page for [Ace Observability](https://github.com/janhoon/ace), an open-source monitoring dashboard for metrics, logs, and traces.
+<h1 align="center">Ace Observability — Website</h1>
 
-Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com), deployed on [Cloudflare Pages](https://pages.cloudflare.com).
+<p align="center">
+  Landing page for <a href="https://github.com/aceobservability/ace">Ace Observability</a>, an open-source monitoring dashboard for metrics, logs, and traces.
+</p>
+
+<p align="center">
+  Built with <a href="https://astro.build">Astro</a> and <a href="https://tailwindcss.com">Tailwind CSS</a>, deployed on <a href="https://pages.cloudflare.com">Cloudflare Pages</a>.
+</p>
+
+---
 
 ## Project Structure
 
@@ -21,12 +31,13 @@ src/
 │   ├── CtaSection.astro          Bottom call to action
 │   └── FooterSection.astro       Footer with links
 ├── styles/
-│   └── global.css                Global styles and Tailwind config
+│   └── global.css                Global styles and Kinetic v2 design tokens
 ├── data/
 │   └── landing.ts                Screenshot gallery and structured data
 public/
-├── landing-*.{jpg,webp}          Product screenshots
-├── favicon.{svg,ico}             Favicons
+├── screenshot-*.png              Product screenshots
+├── ace-favicon.png               Favicon
+├── ace-logo.png                  Hero logo
 ├── _headers                      Cloudflare security headers
 └── _redirects                    Cloudflare redirects
 ```

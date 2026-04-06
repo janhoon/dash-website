@@ -1,39 +1,39 @@
 ---
 import StatsBar from './StatsBar.astro';
+import FeatureTiles from './FeatureTiles.astro';
 ---
 
 <section class="section-band dark-section pt-10 md:pt-16" aria-labelledby="landing-title">
   <div class="section-inner">
     <div class="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center">
       <div>
-        <p class="m-0 font-mono text-xs uppercase tracking-[0.17em] text-emerald-400">Open-source observability</p>
-        <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-semibold leading-tight md:text-5xl">Ace is a truly open-source dashboard for metrics, logs, and traces.</h1>
-        <p class="mt-4 max-w-2xl text-base text-slate-300">
-          One place for Prometheus metrics, Loki logs, Tempo traces, and VictoriaMetrics — built for teams that need fast answers with no license-gated features.
+        <p class="m-0 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.06em] text-[var(--color-primary)]">Open-source observability</p>
+        <h1 id="landing-title" class="mt-2 max-w-[16ch] text-4xl font-bold leading-tight tracking-[-0.04em] md:text-5xl">Ace is a truly open-source dashboard for metrics, logs, and traces.</h1>
+        <p class="mt-4 max-w-2xl text-base text-[var(--color-text-secondary)]">
+          One place for VictoriaMetrics, Loki logs, Tempo traces, and Prometheus — built for teams that need fast answers with no license-gated features.
         </p>
 
         <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a class="rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-emerald-700" href="https://github.com/aceobservability/ace" target="_blank" rel="noreferrer">Get Started Free</a>
-          <a class="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 no-underline transition hover:border-slate-400 hover:text-white" href="https://github.com/aceobservability/ace" target="_blank" rel="noreferrer">View on GitHub</a>
+          <a class="btn-primary" href="https://github.com/aceobservability/ace" target="_blank" rel="noreferrer">Get Started Free</a>
+          <a class="btn-secondary" href="https://github.com/aceobservability/ace" target="_blank" rel="noreferrer">View on GitHub</a>
         </div>
       </div>
 
-      <div class="overflow-hidden rounded-xl border border-slate-700 bg-slate-950" aria-label="Ace application preview">
-        <picture>
-          <source srcset="/landing-hero.webp" type="image/webp" />
-          <img
-            class="block h-auto w-full"
-            src="/landing-hero.jpg"
-            alt="Ace monitoring dashboard screenshot showing metrics, logs, and traces panels"
-            width="1600"
-            height="900"
-            loading="eager"
-            decoding="async"
-          />
-        </picture>
+      <div class="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-stroke-subtle)] bg-[var(--color-surface-card)] shadow-[var(--shadow-lg)]" aria-label="Ace application preview">
+        <img
+          class="block h-auto w-full"
+          src="/screenshot-service-health.png"
+          alt="Ace monitoring dashboard screenshot showing service health metrics, traces, and charts"
+          width="1280"
+          height="720"
+          loading="eager"
+          decoding="async"
+        />
       </div>
     </div>
 
     <StatsBar />
+
+    <FeatureTiles />
   </div>
 </section>

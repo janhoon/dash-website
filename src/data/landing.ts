@@ -2,60 +2,52 @@ export type LandingScreenshot = {
   id: string;
   title: string;
   description: string;
-  webp: string;
-  jpg: string;
+  src: string;
   alt: string;
 };
 
 export const screenshotGallery: LandingScreenshot[] = [
   {
-    id: 'dashboard-overview',
-    title: 'Dashboard overview',
-    description: 'Interactive monitoring overview with metrics, logs, and traces in one dashboard.',
-    webp: '/landing-dashboard.webp',
-    jpg: '/landing-dashboard.jpg',
-    alt: 'Ace monitoring dashboard screenshot showing KPI panels, log stream, and trace timeline overview',
+    id: 'app-performance',
+    title: 'Application Performance',
+    description: 'Latency distribution, DB pool duration, resource gauges, and query performance across the application stack.',
+    src: '/screenshot-service-health.png',
+    alt: 'Ace Application Performance dashboard with average latency, P99 latency, goroutines gauge, memory, query volume, and idle connections',
   },
   {
-    id: 'datasource-config',
-    title: 'Datasource configuration',
-    description:
-      'Configure all 11 datasources — Prometheus, Loki, Tempo, VictoriaMetrics, VictoriaLogs, VictoriaTraces, VMAlert, AlertManager, Elasticsearch, ClickHouse, and CloudWatch — with auth and health checks.',
-    webp: '/landing-datasources.webp',
-    jpg: '/landing-datasources.jpg',
-    alt: 'Ace datasource settings screenshot with Prometheus, Loki, Tempo, VictoriaMetrics, VictoriaLogs, VictoriaTraces, VMAlert, AlertManager, Elasticsearch, ClickHouse, and CloudWatch connection options',
+    id: 'database-health',
+    title: 'Database Health',
+    description: 'Connection pool monitoring, query latency, and database system breakdown with PostgreSQL vs Redis visibility.',
+    src: '/screenshot-infrastructure.png',
+    alt: 'Ace Database Health dashboard showing active connections, idle connections, query latency, CPU, and connection pool over time',
   },
   {
-    id: 'query-editor',
-    title: 'Query editor',
-    description: 'Build and tune observability queries with instant result previews for incident response.',
-    webp: '/landing-query-editor.webp',
-    jpg: '/landing-query-editor.jpg',
-    alt: 'Ace query editor screenshot with datasource selector, query input, and live chart result preview',
+    id: 'http-overview',
+    title: 'HTTP Service Overview',
+    description: 'Gateway traffic, latency percentiles, DB connections by service, and resource utilization for HTTP endpoints.',
+    src: '/screenshot-log-intelligence.png',
+    alt: 'Ace HTTP Service Overview with request rates, error counts, P50/P99 latency, CPU gauge, and active DB connections',
   },
   {
-    id: 'alerts',
-    title: 'Alerting workflows',
-    description: 'Create alert rules tied to dashboards and investigate incidents with related telemetry.',
-    webp: '/landing-alerts.webp',
-    jpg: '/landing-alerts.jpg',
-    alt: 'Ace alerting screenshot showing alert rules list, severity indicators, and recent alert history',
+    id: 'infrastructure',
+    title: 'Infrastructure Overview',
+    description: 'CPU utilization, memory distribution, goroutines, and connection pools across services at a glance.',
+    src: '/screenshot-http-overview.png',
+    alt: 'Ace Infrastructure Overview dashboard with CPU gauge, memory by service, goroutines, active requests, and DB pool charts',
   },
   {
-    id: 'organization-settings',
-    title: 'Organization settings',
-    description: 'Manage team members, SSO providers, and role-based permissions for secure access control.',
-    webp: '/landing-org-settings.webp',
-    jpg: '/landing-org-settings.jpg',
-    alt: 'Ace organization settings screenshot with member management, groups, and authentication providers',
+    id: 'log-intelligence',
+    title: 'Log Intelligence',
+    description: 'Service-level log analysis with gateway, orders, payments, and error streams in real time.',
+    src: '/screenshot-database-health.png',
+    alt: 'Ace Log Intelligence dashboard showing API Gateway, Order Service, Payment Service, and error log streams',
   },
   {
-    id: 'dark-theme',
-    title: 'Dark theme experience',
-    description: 'Use low-glare dark theme layouts for clear observability during on-call and overnight work.',
-    webp: '/landing-dark-theme.webp',
-    jpg: '/landing-dark-theme.jpg',
-    alt: 'Ace dark theme screenshot showing dashboard panels with high-contrast metrics and log visualization',
+    id: 'service-health',
+    title: 'Service Health & Tracing',
+    description: 'Monitor request rates, error rates, P50/P99 latency, DB connections, and goroutines per service with distributed trace drill-down.',
+    src: '/screenshot-app-performance.png',
+    alt: 'Ace Service Health dashboard showing request rate, error rate, latency percentiles, DB connections by service, and trace drill-down',
   },
 ];
 
@@ -236,7 +228,7 @@ const comparisonTableStructuredData = {
       '@type': 'ListItem',
       position: 10,
       name: 'Operational focus',
-      description: 'Ace: focused scope for observability teams that want a streamlined workflow.',
+      description: 'Ace is a strong fit for teams that want truly open-source, self-hosted monitoring.',
     },
   ],
 };
@@ -265,14 +257,14 @@ const imageGalleryStructuredData = {
   '@type': 'ImageGallery',
   name: 'Ace monitoring platform screenshot gallery',
   description:
-    'Screenshot gallery covering Ace dashboards, datasource setup, query editor, alerts, organization settings, and dark theme.',
+    'Screenshot gallery covering Ace dashboards, service health, infrastructure, log intelligence, HTTP overview, database health, and application performance.',
   hasPart: screenshotGallery.map((screenshot, index) => ({
     '@type': 'ImageObject',
     position: index + 1,
     name: screenshot.title,
     description: screenshot.description,
-    contentUrl: screenshot.webp,
-    thumbnailUrl: screenshot.jpg,
+    contentUrl: screenshot.src,
+    thumbnailUrl: screenshot.src,
   })),
 };
 
@@ -288,7 +280,7 @@ const siteNavigationStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'SiteNavigationElement',
   name: ['Features', 'Comparison', 'Get Started'],
-  url: ['/#features', '/#comparison', '/login'],
+  url: ['/#features', '/#comparison', 'https://github.com/aceobservability/ace'],
 };
 
 export const structuredDataPayloads = [

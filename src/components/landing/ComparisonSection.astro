@@ -1,98 +1,99 @@
-<section id="comparison" class="section-band light-section" aria-labelledby="comparison-title">
+<section id="comparison" class="section-band dark-section" aria-labelledby="comparison-title">
   <div class="section-inner">
-    <h2 id="comparison-title" class="m-0 text-2xl font-semibold md:text-3xl">Ace vs Grafana</h2>
-    <p class="mt-4 max-w-3xl text-slate-600">
+    <p class="m-0 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.06em] text-[var(--color-primary)]">Comparison</p>
+    <h2 id="comparison-title" class="mt-2 text-2xl font-bold tracking-[-0.03em] md:text-3xl">Ace vs Grafana</h2>
+    <p class="mt-4 max-w-3xl text-[var(--color-text-secondary)]">
       Compare Ace and Grafana for self-hosted teams evaluating open-source monitoring tools.
     </p>
 
-    <div class="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white">
+    <div class="mt-6 overflow-x-auto rounded-[var(--radius-lg)] border border-[var(--color-stroke-subtle)] bg-[var(--color-surface-card)]">
       <table class="min-w-[760px] w-full border-collapse text-left text-sm">
-        <caption class="px-4 pt-4 pb-2 text-left text-xs text-slate-400">
+        <caption class="px-4 pt-4 pb-2 text-left text-xs text-[var(--color-text-muted)]">
           Feature comparison across dashboards, access control, and migration.
         </caption>
         <thead>
-          <tr class="bg-slate-900 font-mono text-xs uppercase tracking-[0.07em] text-slate-300">
+          <tr class="bg-[var(--color-surface-bright)] font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.06em] text-[var(--color-text-muted)]">
             <th scope="col" class="px-4 py-3">Feature</th>
             <th scope="col" class="px-4 py-3">Ace</th>
             <th scope="col" class="px-4 py-3">Grafana</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="w-[28%] px-4 py-3 font-semibold text-slate-900">Deployment model</th>
-            <td class="px-4 py-3 text-slate-700">Self-hosted first with straightforward local setup</td>
-            <td class="px-4 py-3 text-slate-500">Cloud and self-hosted options with a wider set of products and plans</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="w-[28%] px-4 py-3 font-semibold text-[var(--color-text-primary)]">Deployment model</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Self-hosted first with straightforward local setup</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Cloud and self-hosted options with a wider set of products and plans</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Source model</th>
-            <td class="px-4 py-3 text-slate-700">Truly open-source codebase with no paid-only features</td>
-            <td class="px-4 py-3 text-slate-500">Open-source core with enterprise and cloud offerings</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Source model</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Truly open-source codebase with no paid-only features</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Open-source core with enterprise and cloud offerings</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Prometheus metrics</th>
-            <td class="px-4 py-3 text-slate-500">Native support for Prometheus-compatible metrics queries</td>
-            <td class="px-4 py-3 text-slate-500">Native support for Prometheus-compatible metrics queries</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Prometheus metrics</th>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Native support for Prometheus-compatible metrics queries</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Native support for Prometheus-compatible metrics queries</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Loki logs</th>
-            <td class="px-4 py-3 text-slate-500">Integrated Explore flow for logs and related telemetry</td>
-            <td class="px-4 py-3 text-slate-500">Integrated Explore flow for logs and related telemetry</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Loki logs</th>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Integrated Explore flow for logs and related telemetry</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Integrated Explore flow for logs and related telemetry</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Tempo traces</th>
-            <td class="px-4 py-3 text-slate-500">Trace search and timeline views in the same interface</td>
-            <td class="px-4 py-3 text-slate-500">Trace support through Tempo integrations and trace views</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Tempo traces</th>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Trace search and timeline views in the same interface</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Trace support through Tempo integrations and trace views</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Dashboard migration</th>
-            <td class="px-4 py-3 text-slate-700">Built-in Grafana conversion flow and YAML import path</td>
-            <td class="px-4 py-3 text-slate-500">Native format for existing Grafana JSON dashboards</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Dashboard migration</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Built-in Grafana conversion flow and YAML import path</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Native format for existing Grafana JSON dashboards</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Configuration as code</th>
-            <td class="px-4 py-3 text-slate-700">YAML export and import for easy review and repeatable setup</td>
-            <td class="px-4 py-3 text-slate-500">JSON export commonly used for dashboard portability</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Configuration as code</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">YAML export and import for easy review and repeatable setup</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">JSON export commonly used for dashboard portability</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Organization access control</th>
-            <td class="px-4 py-3 text-slate-700">Admin, editor, and viewer roles are simple to apply</td>
-            <td class="px-4 py-3 text-slate-500">Role behavior varies by deployment and edition</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Organization access control</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Admin, editor, and viewer roles are simple to apply</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Role behavior varies by deployment and edition</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">SSO administration</th>
-            <td class="px-4 py-3 text-slate-700">Provider setup available in organization settings</td>
-            <td class="px-4 py-3 text-slate-500">Provider setup depends on deployment mode and edition features</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">SSO administration</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Provider setup available in organization settings</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Provider setup depends on deployment mode and edition features</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">VictoriaMetrics stack</th>
-            <td class="px-4 py-3 text-slate-700">Native support for VictoriaMetrics, VictoriaLogs, VictoriaTraces, and VMAlert as first-class datasources</td>
-            <td class="px-4 py-3 text-slate-500">Supports VictoriaMetrics via Prometheus-compatible plugin</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">VictoriaMetrics stack</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Native support for VictoriaMetrics, VictoriaLogs, VictoriaTraces, and VMAlert as first-class datasources</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Supports VictoriaMetrics via Prometheus-compatible plugin</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">ClickHouse</th>
-            <td class="px-4 py-3 text-slate-700">Native SQL query editor for ClickHouse analytics and log queries</td>
-            <td class="px-4 py-3 text-slate-500">Available via community plugin</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">ClickHouse</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Native SQL query editor for ClickHouse analytics and log queries</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Available via community plugin</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">AlertManager</th>
-            <td class="px-4 py-3 text-slate-700">Built-in AlertManager datasource for viewing alerts, managing silences, and configuring receivers</td>
-            <td class="px-4 py-3 text-slate-500">Supports AlertManager through native alerting integration</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">AlertManager</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Built-in AlertManager datasource for viewing alerts, managing silences, and configuring receivers</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Supports AlertManager through native alerting integration</td>
           </tr>
-          <tr class="border-b border-slate-100 align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">CloudWatch (AWS)</th>
-            <td class="px-4 py-3 text-slate-700">Query AWS CloudWatch metrics and logs directly from Ace with IAM credentials</td>
-            <td class="px-4 py-3 text-slate-500">Supported via built-in CloudWatch plugin</td>
+          <tr class="border-b border-[var(--color-stroke-subtle)] align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">CloudWatch (AWS)</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Query AWS CloudWatch metrics and logs directly from Ace with IAM credentials</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Supported via built-in CloudWatch plugin</td>
           </tr>
-          <tr class="align-top bg-emerald-50">
-            <th scope="row" class="px-4 py-3 font-semibold text-slate-900">Operational scope</th>
-            <td class="px-4 py-3 text-slate-700">Focused product centered on monitoring and incident debugging</td>
-            <td class="px-4 py-3 text-slate-500">Broad ecosystem with many plugins and product extensions</td>
+          <tr class="align-top bg-[var(--color-primary-muted)]">
+            <th scope="row" class="px-4 py-3 font-semibold text-[var(--color-text-primary)]">Operational scope</th>
+            <td class="px-4 py-3 text-[var(--color-text-secondary)]">Focused product centered on monitoring and incident debugging</td>
+            <td class="px-4 py-3 text-[var(--color-text-muted)]">Broad ecosystem with many plugins and product extensions</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <p class="mt-4 max-w-4xl text-sm text-slate-500">
+    <p class="mt-4 max-w-4xl text-sm text-[var(--color-text-muted)]">
       Ace is a strong fit for teams that want truly open-source, self-hosted monitoring with metrics, logs,
       traces, and access control in one product. Grafana remains a mature option with a larger plugin ecosystem.
     </p>

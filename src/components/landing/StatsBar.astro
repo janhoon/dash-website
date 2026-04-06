@@ -24,21 +24,21 @@ const stats = [
 ];
 ---
 
-<div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-slate-700" aria-label="Key product stats">
+<div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-[var(--color-stroke-subtle)]" aria-label="Key product stats">
   {
     stats.map((stat) => (
       <div class="flex flex-col items-center text-center md:px-6">
         <div class="flex items-end gap-2">
           {stat.dynamic ? (
-            <span id="gh-stars" class="font-mono text-4xl font-bold text-white md:text-5xl">&mdash;</span>
+            <span id="gh-stars" class="font-[family-name:var(--font-mono)] text-4xl font-bold text-[var(--color-text-primary)] md:text-5xl">&mdash;</span>
           ) : (
-            <span class="font-mono text-4xl font-bold text-white md:text-5xl">{stat.value}</span>
+            <span class="font-[family-name:var(--font-mono)] text-4xl font-bold text-[var(--color-text-primary)] md:text-5xl">{stat.value}</span>
           )}
-          <svg class="mb-2 h-3 w-6 text-emerald-500/40" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+          <svg class="mb-2 h-3 w-6 text-[var(--color-primary)]/40" viewBox="0 0 24 12" fill="none" aria-hidden="true">
             <path d={stat.sparkline} stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <span class="mt-1 font-mono text-xs uppercase tracking-wider text-slate-400">{stat.label}</span>
+        <span class="mt-1 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.06em] text-[var(--color-text-muted)]">{stat.label}</span>
       </div>
     ))
   }
