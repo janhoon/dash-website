@@ -40,9 +40,18 @@ export const POST: APIRoute = async ({ request }) => {
         }),
       });
 
-      const turnstileData = await turnstileResult.json() as { success: boolean };
+      const turnstileData = await turnstileResult.json() as { success: boolean; 'error-codes'?: string[] };
       if (!turnstileData.success) {
-        return jsonResponse({ success: false, error: 'Bot verification failed. Please try again.' }, 403);
+        return jsonResponse({
+          success: false,
+          error: 'Bot verification failed. Please try again.',
+          debug: {
+            errors: turnstileData['error-codes'],
+            hasToken: !!turnstileToken,
+            tokenLength: turnstileToken?.length || 0,
+            hasSecret: !!turnstileSecret,
+          }
+        }, 403);
       }
     }
 
